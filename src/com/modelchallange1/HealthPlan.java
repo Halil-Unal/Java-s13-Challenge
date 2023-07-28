@@ -3,9 +3,9 @@ package com.modelchallange1;
 public class HealthPlan {
     private int id;
    private String name;
-   plan plan;
+   private Plan plan;
 
-    public HealthPlan(int id, String name, com.modelchallange1.plan plan) {
+    public HealthPlan(int id, String name, Plan plan) {
         this.id = id;
         this.name = name;
         this.plan = plan;
@@ -27,11 +27,14 @@ public class HealthPlan {
         this.name = name;
     }
 
-    public com.modelchallange1.plan getPlan() {
+    public Plan getPlan() {
         return plan;
     }
 
-    public void setPlan(com.modelchallange1.plan plan) {
+    public void setPlan(Plan plan) {
         this.plan = plan;
+    }
+    public String toString() {
+        return "Name: " + name + " id: " + id + " plan: " + plan.toString() ;
     }
 }

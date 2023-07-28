@@ -11,7 +11,7 @@ public class Company {
     public Company(int id, String name, int giro, String[] developerNames) {
         this.id = id;
         this.name = name;
-        this.giro = giro;
+       checkGiro(giro);
         this.developerNames = developerNames;
     }
 
@@ -40,11 +40,29 @@ public class Company {
     }
 
     public void setGiro(int giro) {
-        this.giro = giro;
+        checkGiro(giro);
     }
 
     public void setDeveloperNames(String[] developerNames) {
         this.developerNames = developerNames;
+    }
+   private void checkGiro(int giro){
+        if(giro<0){
+            giro=0;
+        }else{
+            this.giro=giro;
+        }
+    }
+    public void addNames(int index,String name){
+        try{
+            if(developerNames[index]==null){
+                developerNames[index]=name;
+            }
+        }catch (ArrayIndexOutOfBoundsException ex){
+            System.out.println("olmayan index");
+        }
+
+
     }
     public String toString() {
         return "Name: " + name + " id: " + id + " giro: " + giro + " names: " + "developers" + Arrays.toString(developerNames);

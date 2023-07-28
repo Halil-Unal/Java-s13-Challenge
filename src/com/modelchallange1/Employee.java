@@ -1,5 +1,7 @@
 package com.modelchallange1;
 
+import java.util.Arrays;
+
 public class Employee {
     private int id;
     private String fullName;
@@ -53,5 +55,20 @@ public class Employee {
 
     public void setHealthPlans(String[] healthPlans) {
         this.healthPlans = healthPlans;
+    }
+    public void addHealthPlan(int index,String name){
+        try{
+            if (healthPlans[index]==null){
+                healthPlans[index]=name;
+            }else{
+                System.out.println("atama yapılmış");
+            }
+        }catch (ArrayIndexOutOfBoundsException ex){
+            System.out.println("olmayan index");
+        }
+
+    }
+    public String toString() {
+        return "Name: " + fullName + " id: " + id + " mail: " + email + " password: " + password + " healthplans :" + Arrays.toString(healthPlans);
     }
 }

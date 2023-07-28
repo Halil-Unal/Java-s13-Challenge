@@ -1,8 +1,9 @@
 package employeeApp;
 
 import com.modelchallange1.Company;
-
-import java.util.ArrayList;
+import com.modelchallange1.Employee;
+import com.modelchallange1.HealthPlan;
+import com.modelchallange1.Plan;
 
 /**
  * Uygulamanın amacı Java'da nesne tabanlı programlamanın temellerinin oluşturulmasıdır.
@@ -16,10 +17,19 @@ public class Main
      */
     private static void workWithData ()
     {
-        String[] developers = {"AHMET", "JOHN", "MARY"};
+        String[] developers = {"AHMET", null, "MARY",null};
+        String[] plans={"CARDİO","NİCE FODDS","YOGA",null,null};
         Company comp =new Company(5,"ALİ",100,developers);
+        comp.addNames(1,"JOHN");
+        comp.addNames(0,"ARTHUR");
         System.out.println(comp);
 
+        Employee emp =new Employee(5,"ALİ İHSAN","VELİ@GMAİL.COM","2365LŞG",plans);
+        emp.addHealthPlan(4,"veli");
+        emp.addHealthPlan(2,"ali");
+        System.out.println(emp);
+        HealthPlan healthplan=new HealthPlan(5,"ahmet", Plan.BASİC);
+        System.out.println(healthplan);
     }
 
     /**
