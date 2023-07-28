@@ -61,10 +61,10 @@ public class Employee {
             if (healthPlans[index]==null){
                 healthPlans[index]=name;
             }else{
-                System.out.println("atama yapılmış");
+                System.out.println("Atama Yapılmış");
             }
         }catch (ArrayIndexOutOfBoundsException ex){
-            System.out.println("olmayan index");
+            System.out.println("Olmayan Index");
         }
 
     }

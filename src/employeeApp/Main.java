@@ -26,7 +26,7 @@ public class Main
 
         Employee emp =new Employee(5,"ALİ İHSAN","VELİ@GMAİL.COM","2365LŞG",plans);
         emp.addHealthPlan(4,"veli");
-        emp.addHealthPlan(2,"ali");
+        emp.addHealthPlan(9,"ali");
         System.out.println(emp);
         HealthPlan healthplan=new HealthPlan(5,"ahmet", Plan.BASİC);
         System.out.println(healthplan);

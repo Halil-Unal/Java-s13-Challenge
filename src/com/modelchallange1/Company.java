@@ -57,9 +57,11 @@ public class Company {
         try{
             if(developerNames[index]==null){
                 developerNames[index]=name;
+            }else{
+                System.out.println("Atama Yapılmış");
             }
         }catch (ArrayIndexOutOfBoundsException ex){
-            System.out.println("olmayan index");
+            System.out.println("Olmayan Index");
         }
 
 
