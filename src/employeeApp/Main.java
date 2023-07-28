@@ -1,5 +1,9 @@
 package employeeApp;
 
+import com.modelchallange1.Company;
+
+import java.util.ArrayList;
+
 /**
  * Uygulamanın amacı Java'da nesne tabanlı programlamanın temellerinin oluşturulmasıdır.
  *
@@ -12,6 +16,9 @@ public class Main
      */
     private static void workWithData ()
     {
+        String[] developers = {"AHMET", "JOHN", "MARY"};
+        Company comp =new Company(5,"ALİ",100,developers);
+        System.out.println(comp);
 
     }
 
